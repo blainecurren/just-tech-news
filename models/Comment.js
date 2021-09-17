@@ -14,7 +14,6 @@ Comment.init(
     comment_text: {
       type: DataTypes.STRING,
       allowNull: false,
-      primaryKey: true,
       validate: {
         len: [1],
       },
@@ -28,7 +27,6 @@ Comment.init(
     },
     post_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
         model: "post",
         key: "id",

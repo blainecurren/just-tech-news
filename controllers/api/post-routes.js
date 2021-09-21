@@ -40,6 +40,7 @@ router.get("/", (req, res) => {
     });
 });
 
+// GET route ID
 router.get("/:id", (req, res) => {
   Post.findOne({
     where: {
@@ -85,6 +86,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
+// POST route "/"
 router.post("/", (req, res) => {
   // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
   if (req.session) {
@@ -101,6 +103,7 @@ router.post("/", (req, res) => {
   }
 });
 
+//PUT upvote route
 router.put("/upvote", (req, res) => {
   // make sure the session exists first
   if (req.session) {
@@ -117,6 +120,7 @@ router.put("/upvote", (req, res) => {
   }
 });
 
+// PUT ID route
 router.put("/:id", (req, res) => {
   Post.update(
     {
@@ -141,6 +145,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
+// DELETE ID route
 router.delete("/:id", (req, res) => {
   console.log("id", req.params.id);
   Post.destroy({

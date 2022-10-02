@@ -6,8 +6,8 @@ require("dotenv").config();
 // create connnection to our databse, pass in your mysql info for username and password
 const sequelize = new Sequelize(
   process.env.DB_NAME,
-  process.env.USERNAME,
-  process.env.PW,
+  process.env.DB_USER,
+  process.env.DB_PW,
   {
     host: "localhost",
     dialect: "mysql",

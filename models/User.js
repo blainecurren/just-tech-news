@@ -15,11 +15,11 @@ User.init(
     },
 
     username: {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     email: {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {
@@ -27,7 +27,7 @@ User.init(
       },
     },
     password: {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [4],
